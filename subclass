@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+/**
+ * Created by Stefan.Iuga on 7/21/2016.
+ */
+public class HealthProfileTest {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        HealthProfile person1 = new HealthProfile(null, null, 0, 0, 0, 0, 0);
+
+        System.out.println("Enter your first name: ");
+        String n1 = input.nextLine();
+        person1.setFirstName(n1);
+        System.out.println();
+
+        System.out.println("Enter your last name: ");
+        String l1 = input.nextLine();
+        person1.setLastName(l1);
+        System.out.println();
+
+        System.out.println("Enter your day of birth: ");
+        int d1 = input.nextInt();
+        person1.setDay(d1);
+
+        System.out.println("Enter the month of your birth: ");
+        int m1 = input.nextInt();
+        person1.setMonth(m1);
+
+        System.out.println("Enter the year of your birth: ");
+        int y1 = input.nextInt();
+        person1.setYear(y1);
+
+        System.out.println("Enter your weight in pounds: ");
+        double we = input.nextDouble();
+        person1.setWeight(we);
+
+        System.out.println("Enter your height in inches: ");
+        double he = input.nextDouble();
+        person1.setHeight(he);
+
+        person1.displayMessage();
+
+    }
+}
